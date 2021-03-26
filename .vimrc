@@ -1,3 +1,13 @@
+" PlugInstall Start                                                                                                                                                                                                                       
+call plug#begin('~/.vim/plugged')
+" Install NERDTree
+Plug 'https://github.com/preservim/nerdtree'
+Plug 'junegunn/vim-easy-align'
+" NERD tree will be loaded on the first invocation of NERDTreeToggle command
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+" PlugInstall end
+call plug#end()
+
 " enable syntax highlighting
 syntax enable
 
@@ -23,3 +33,6 @@ set showmatch
 
 " enable Python syntax highliting features
 let python_highlight_all = 1
+" scrolloff
+set scrolloff=20
+
