@@ -1,8 +1,6 @@
 " Call the .vimrc.plug file
+source .vimrc.plug
 
-if filereadable(expand("${pwd}/.vimrc.plug"))
-	source ${pwd}/.vimrc.plug
-endif
 " enable syntax highlighting
 syntax enable
 
