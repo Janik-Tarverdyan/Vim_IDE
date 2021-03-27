@@ -1,13 +1,8 @@
-" PlugInstall Start                                                                                                                                                                                                                       
-call plug#begin('~/.vim/plugged')
-" Install NERDTree
-Plug 'https://github.com/preservim/nerdtree'
-Plug 'junegunn/vim-easy-align'
-" NERD tree will be loaded on the first invocation of NERDTreeToggle command
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-" PlugInstall end
-call plug#end()
+" Call the .vimrc.plug file
 
+if filereadable(expand("${pwd}/.vimrc.plug"))
+	source ${pwd}/.vimrc.plug
+endif
 " enable syntax highlighting
 syntax enable
 
@@ -26,13 +21,26 @@ set expandtab
 set shiftwidth=4
 
 " show visual line under the cursor's current line
-set cursoreline
+set cursorline
 
 " show matching part for [], {}, ()
 set showmatch
 
 " enable Python syntax highliting features
 let python_highlight_all = 1
+
 " scrolloff
 set scrolloff=20
+
+" Display Options
+set showcmd
+
+" Set Encoding to UTF-8
+set encoding=utf-8
+
+" Highlight matching search patterns
+set hlsearch
+
+" Enable incremental search
+set incsearch
 
