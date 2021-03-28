@@ -19,8 +19,31 @@ set relativenumber
 " set tab = 4 spaces
 set ts=4
 
+" Right And Left Screen Columns
+set sidescrolloff=10
+
+" Enable line wrap
+set wrap
+
+" Display command line's tab complete options as menu
+set wildmenu
+
+" Set title for file
+set title
+
+" Enable mouse
+set mouse=a
+
+" Always show cursor position
+set ruler
+
+" Automatically re-read files if unmodified inside Vim
+set autoread
+
+
 " Set maxtabs
 set tabpagemax=10
+
 " indent when moving to the next line while writing code
 set autoindent
 
@@ -53,5 +76,11 @@ set hlsearch
 
 " Enable incremental search
 set incsearch
+
+" Igore case when searching
+set ignorecase
+
+" Automatically switch search to case-sensitive when search query contains an uppercase letter.
+set smartcase
 
 
