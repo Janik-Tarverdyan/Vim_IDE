@@ -6,5 +6,7 @@ Plug 'https://github.com/preservim/nerdtree'
 Plug 'junegunn/vim-easy-align'
 " NERD tree will be loaded on the first invocation of NERDTreeToggle command
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+" Python Import helper
+Plug 'dbsr/vimpy'
 " PlugInstall end
 call plug#end()        
