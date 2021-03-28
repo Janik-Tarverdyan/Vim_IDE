@@ -1,10 +1,30 @@
 " PlugInstall Start                                                                                                                                                                                                                       
 call plug#begin('~/.vim/plugged')
 " Install NERDTree
-Plug 'preservim/nerdtree'
+Plug 'scrooloose/nerdtree.git' 
 " Install Vim-Easy-Align
 Plug 'junegunn/vim-easy-align'
+Plug 'mhartington/oceanic-next'
+Plug 'tmhedberg/SimpylFold'
+" Plugins For Python
+Plug 'vim-scripts/indentpython.vim'
+Plug 'python-mode/python-mode'
+Plug 'mgedmin/python-imports.vim' 
+" End Of Python Plugins
+
+Plug 'vim-syntastic/syntastic'
+Plug 'nvie/vim-flake8'
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'zxqfl/tabnine-vim'
+Plug 'frazrepo/vim-rainbow'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'davidhalter/jedi-vim'
+Plug 'ycm-core/YouCompleteMe'
 " Python Import helper
-" Plug 'dbsr/vimpy'
+
 " PlugInstall end
 call plug#end()        
