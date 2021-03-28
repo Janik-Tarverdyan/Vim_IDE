@@ -1,4 +1,3 @@
-
 " Install PlugInstall before getting into 
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
@@ -10,6 +9,9 @@ source .vimrc.plug
 
 " enable syntax highlighting
 syntax enable
+
+" Settung TabLineSel Color
+hi TabLineSel ctermfg=Black ctermbg=Green
 
 " Setting Relative Numbers
 set relativenumber
@@ -51,4 +53,5 @@ set hlsearch
 
 " Enable incremental search
 set incsearch
+
 
