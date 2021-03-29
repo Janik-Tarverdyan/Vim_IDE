@@ -86,7 +86,7 @@ set smartcase
 " NERDTree configs 
 let g:NERDTreeWinPos = "Left"
 let g:NERDTreeWinSize = 60
-autocmd vimenter * | NERDTree
+autocmd vimenter *.* | NERDTree
 " autocmd vimenter * if !argc() | NERDTree | endif
 
 
