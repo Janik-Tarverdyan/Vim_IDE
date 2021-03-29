@@ -83,4 +83,12 @@ set ignorecase
 " Automatically switch search to case-sensitive when search query contains an uppercase letter.
 set smartcase
 
+" NERDTree configs 
+let g:NERDTreeWinPos = "Left"
+let g:NERDTreeWinSize = 60
+autocmd vimenter * | NERDTree
+" autocmd vimenter * if !argc() | NERDTree | endif
+
+
+
 

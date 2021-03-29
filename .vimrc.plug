@@ -31,4 +31,4 @@ Plug 'ycm-core/YouCompleteMe'
 " Python Import helper
 
 " PlugInstall end
-call plug#end()        
+call plug#end()
