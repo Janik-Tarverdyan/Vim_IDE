@@ -1,7 +1,5 @@
 " PlugInstall Start                                                                                                                                                                                                                       
 call plug#begin('~/.vim/plugged')
-" Install NERDTree
-Plug 'scrooloose/nerdtree.git' 
 " Install Vim-Easy-Align
 Plug 'junegunn/vim-easy-align'
 Plug 'mhartington/oceanic-next'
@@ -15,14 +13,15 @@ Plug 'mgedmin/python-imports.vim'
 " Docker Docker-Compose Plugins
 Plug 'skanehira/docker-compose.vim'
 Plug 'skanehira/docker.vim'
-
+"End of Docker Docker-Compose Plugins
 Plug 'vim-syntastic/syntastic'
 Plug 'nvie/vim-flake8'
+" NERDTree Plugins
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
+" End Of NERDTree Plugins
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'zxqfl/tabnine-vim'
 Plug 'frazrepo/vim-rainbow'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
