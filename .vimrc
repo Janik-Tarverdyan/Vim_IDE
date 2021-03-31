@@ -14,9 +14,8 @@ syntax enable
 hi TabLineSel ctermfg=Black ctermbg=Green
 
 " Setting Relative Numbers
-set relativenumber
-
-" set tab = 4 spaces
+set number relativenumber
+" Set tab = 4 spaces
 set ts=4
 
 " Right And Left Screen Columns
@@ -82,6 +81,9 @@ set ignorecase
 
 " Automatically switch search to case-sensitive when search query contains an uppercase letter.
 set smartcase
+
+" Python-mode configurations
+let g:pymode_python = 'python3'
 
 " NERDTree configs 
 let g:NERDTreeWinPos = "Left"
