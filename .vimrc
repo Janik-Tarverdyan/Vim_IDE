@@ -7,6 +7,9 @@ endif
 " Call the .vimrc.plug file
 source .vimrc.plug
 
+" Have Access to copy and past outside from vim
+set clipboard=unnamedplus
+
 " enable syntax highlighting
 syntax enable
 
@@ -15,7 +18,8 @@ hi TabLineSel ctermfg=Black ctermbg=Green
 
 " Setting Relative Numbers
 set number relativenumber
-" Set tab = 4 spaces
+
+" set tab = 4 spaces
 set ts=4
 
 " Right And Left Screen Columns
@@ -82,13 +86,10 @@ set ignorecase
 " Automatically switch search to case-sensitive when search query contains an uppercase letter.
 set smartcase
 
-" Python-mode configurations
-let g:pymode_python = 'python3'
-
 " NERDTree configs 
 let g:NERDTreeWinPos = "Left"
 let g:NERDTreeWinSize = 60
-autocmd vimenter *.* | NERDTree
+autocmd vimenter if [*.* | .*] | NERDTree
 " autocmd vimenter * if !argc() | NERDTree | endif
 
 
