@@ -9,7 +9,9 @@ Plug 'vim-scripts/indentpython.vim'
 Plug 'python-mode/python-mode'
 Plug 'mgedmin/python-imports.vim' 
 " End Of Python Plugins
-
+" Git Plugin
+Plug 'airblade/vim-gitgutter' 
+" End of Git Plugin
 " Docker Docker-Compose Plugins
 Plug 'skanehira/docker-compose.vim'
 Plug 'skanehira/docker.vim'
@@ -27,6 +29,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'davidhalter/jedi-vim'
 Plug 'ycm-core/YouCompleteMe'
+" Python Import helper
 
 " PlugInstall end
 call plug#end()

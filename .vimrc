@@ -11,11 +11,50 @@ source .vimrc.plug
 set clipboard=unnamedplus
 
 " enable syntax highlighting
+" set term=ansi
 syntax enable
+
+" Setting whitespace to be shown
+set list
+set listchars=tab:>-
+let python_space_errors = 1
+let python_no_trail_space_error = 1
+let pytthon_no_tab_space_error = 1
+
+
+"COLORS 
+" SETTING COLORS
 
 " Settung TabLineSel Color
 hi TabLineSel ctermfg=Black ctermbg=Green
 
+"  Setting Search Color
+hi Search cterm=italic ctermfg=white ctermbg=Blue
+
+hi Identifier ctermfg=white ctermbg=Blue
+
+
+" Setting Pmenu Colors
+hi Pmenu ctermfg=white ctermbg=Green
+" Selected Item color
+hi PmenuSel ctermfg=white ctermbg=Blue
+" scrollbar color
+hi PmenuSbar ctermfg=white ctermbg=LightBlue
+" scrollbur thumb color
+hi PmenuThumb ctermfg=blue ctermbg=LightGreen
+" Ended Pmenu Color Settings
+
+" WildMenu Color Settings (Command Suggestions With Tab)
+hi WildMenu ctermfg=white ctermbg=blue
+hi Menu ctermfg=white ctermbg=red
+hi StatusLine ctermfg=LightGreen ctermbg=black
+
+" Settings Todo colors
+hi Todo guifg=white guibg=#FF7F50
+
+
+" END OF SETTING COLORS
+""" COLORS
 " Setting Relative Numbers
 set number relativenumber
 
