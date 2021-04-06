@@ -5,6 +5,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'mhartington/oceanic-next'
 Plug 'tmhedberg/SimpylFold'
 " Plugins For Python
+Plug 'sansyrox/vim-python-virtualenv'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'python-mode/python-mode'
 Plug 'mgedmin/python-imports.vim' 

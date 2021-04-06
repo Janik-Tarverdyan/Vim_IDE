@@ -5,7 +5,7 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 " Call the .vimrc.plug file
-source .vimrc.plug
+source ~/.vimrc.plug
 
 " Have Access to copy and past outside from vim
 set clipboard=unnamedplus
@@ -17,6 +17,7 @@ syntax enable
 " Setting whitespace to be shown
 set list
 set listchars=tab:>-
+" Setting Python space/tab/trail errors on
 let python_space_errors = 1
 let python_no_trail_space_error = 1
 let pytthon_no_tab_space_error = 1
@@ -103,6 +104,7 @@ set showmatch
 
 " enable Python syntax highliting features
 let python_highlight_all = 1
+let g:python3_host_prog='/usr/bin/python3'
 
 " scrolloff
 set scrolloff=20
@@ -126,9 +128,10 @@ set ignorecase
 set smartcase
 
 " NERDTree configs 
-let g:NERDTreeWinPos = "Left"
+let g:NERDTreeWinPos = "left"
 let g:NERDTreeWinSize = 60
-autocmd vimenter if [*.* | .*] | NERDTree
+
+autocmd vimenter * NERDTree
 " autocmd vimenter * if !argc() | NERDTree | endif
 
 
