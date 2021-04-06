@@ -128,11 +128,16 @@ set ignorecase
 set smartcase
 
 " NERDTree configs 
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
 let g:NERDTreeWinPos = "left"
 let g:NERDTreeWinSize = 60
+map <C-W-W> : tabn<CR>
+map <C-W-D> : tabp<CR>
+let g:nerdtree_tabs_open_on_console_startup=1
 
-autocmd vimenter * NERDTree
-" autocmd vimenter * if !argc() | NERDTree | endif
+" autocmd vimenter !isdirectory(a) | NERDTree
+
+" autocmd vimenter * if !isdirectory(dir_name) | NERDTree | endif
 
 
 
