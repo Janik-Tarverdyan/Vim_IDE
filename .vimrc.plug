@@ -12,6 +12,7 @@ Plug 'mgedmin/python-imports.vim'
 " End Of Python Plugins
 " Git Plugin
 Plug 'airblade/vim-gitgutter' 
+Plug 'tpope/vim-fugitive'
 " End of Git Plugin
 " Docker Docker-Compose Plugins
 Plug 'skanehira/docker-compose.vim'
@@ -31,7 +32,15 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'davidhalter/jedi-vim'
 Plug 'ycm-core/YouCompleteMe'
-" Python Import helper
+" Ultisnips
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+" Close Tags
+Plug 'alvan/vim-closetag'
+Plug 'jiangmiao/auto-pairs'
+
+" Tmux
+Plug 'christoomey/vim-tmux-navigator'
 
 " PlugInstall end
 call plug#end()

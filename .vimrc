@@ -104,6 +104,8 @@ set showmatch
 
 " enable Python syntax highliting features
 let python_highlight_all = 1
+
+" python def host
 let g:python3_host_prog='/usr/bin/python3'
 
 " scrolloff
@@ -127,18 +129,49 @@ set ignorecase
 " Automatically switch search to case-sensitive when search query contains an uppercase letter.
 set smartcase
 
-" NERDTree configs 
-map <Leader>n <plug>NERDTreeTabsToggle<CR>
-let g:NERDTreeWinPos = "left"
-let g:NERDTreeWinSize = 60
+" Tab maps
 map <C-W-W> : tabn<CR>
-map <C-W-D> : tabp<CR>
-let g:nerdtree_tabs_open_on_console_startup=1
+" End of Tab maps
 
-" autocmd vimenter !isdirectory(a) | NERDTree
+" ---> YouCompleteMe <--- configs
+let g:ycm_key_list_select_completion = [ '<C-n>', '<Down>' ] 
+let g:ycm_key_list_previous_completion = [ '<C-p>', '<Up>' ]
+let g:SuperTabDefaultCompletionType = '<C-n>'
+" End of ---> YouCompleteMe <--- configs
 
-" autocmd vimenter * if !isdirectory(dir_name) | NERDTree | endif
+" ---> NERDTree <--- configs 
+" map <Leader>n <plug>NERDTreeTabsToggle<CR>
+let g:NERDTreeWinPos = "left"
+let g:NERDTreeWinSize = 6
+let g:nerdtree_tabs_smart_startup_focus = 1 
+let g:nerdtree_tabs_autoclose = 1
+let g:nerdtree_tabs_autofind = 1
+let NERDTreeIgnore = [ '__pycache__', '\.pyc$', '\.o$', '\.swp',  '*\.swp',  'node_modules/' ]
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }
 
+" let g:nerdtree_tabs_open_on_console_startup = 1
+
+" End ---> NERDTree <--- configs
+
+" ---> Ultisnips configs <--- 
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+" ---> End of Ultisnips configs <---
+
+" ---> Tags autofill <--- configs
+let g:closetag_filenames = '*.html,*.xhtml,*.xml,*.vue,*.phtml,*.js,*.jsx,*.coffee,*.erb'
+" ---> End of Tags autofill<---
 
 
 
