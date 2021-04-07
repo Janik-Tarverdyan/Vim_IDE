@@ -140,13 +140,14 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 " End of ---> YouCompleteMe <--- configs
 
 " ---> NERDTree <--- configs 
-" map <Leader>n <plug>NERDTreeTabsToggle<CR>
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
 let g:NERDTreeWinPos = "left"
-let g:NERDTreeWinSize = 6
-let g:nerdtree_tabs_smart_startup_focus = 1 
-let g:nerdtree_tabs_autoclose = 1
-let g:nerdtree_tabs_autofind = 1
+let g:NERDTreeWinSize = 60
+" let g:nerdtree_tabs_smart_startup_focus = 1 
+" let g:nerdtree_tabs_autoclose = 1
+" let g:nerdtree_tabs_autofind = 1
 let NERDTreeIgnore = [ '__pycache__', '\.pyc$', '\.o$', '\.swp',  '*\.swp',  'node_modules/' ]
+let NERDTreeShowHidden = 1
 let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
@@ -158,7 +159,9 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Clean"     : "✔︎",
     \ "Unknown"   : "?"
     \ }
-
+autocmd vimenter * NERDTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:stdn_in") | NERDTree | endif
 " let g:nerdtree_tabs_open_on_console_startup = 1
 
 " End ---> NERDTree <--- configs
