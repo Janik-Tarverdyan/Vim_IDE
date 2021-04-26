@@ -1,3 +1,5 @@
+let mapleader = ","
+
 " Install PlugInstall before getting into 
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
@@ -6,6 +8,7 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 " Call the .vimrc.plug file
 source ~/.vimrc.plug
+" source ~/install.sh
 
 " Have Access to copy and past outside from vim
 set clipboard=unnamedplus
@@ -16,6 +19,7 @@ syntax enable
 
 " Setting whitespace to be shown
 set list
+" 
 set listchars=tab:>-
 " Setting Python space/tab/trail errors on
 let python_space_errors = 1
@@ -130,7 +134,9 @@ set ignorecase
 set smartcase
 
 " Tab maps
-map <C-W-W> : tabn<CR>
+map <C-W-P> : tabnew<CR>
+" map <C-n> : tabn<CR>
+" map <C-b> : tabp<CR>
 " End of Tab maps
 
 " ---> YouCompleteMe <--- configs
@@ -140,7 +146,7 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 " End of ---> YouCompleteMe <--- configs
 
 " ---> NERDTree <--- configs 
-map <Leader>n <plug>NERDTreeTabsToggle<CR>
+" map <Leader>n <plug>NERDTreeTabsToggle<CR>
 let g:NERDTreeWinPos = "left"
 let g:NERDTreeWinSize = 60
 " let g:nerdtree_tabs_smart_startup_focus = 1 
@@ -148,6 +154,7 @@ let g:NERDTreeWinSize = 60
 " let g:nerdtree_tabs_autofind = 1
 let NERDTreeIgnore = [ '__pycache__', '\.pyc$', '\.o$', '\.swp',  '*\.swp',  'node_modules/' ]
 let NERDTreeShowHidden = 1
+map <Leader>r :NERDTreeFind<CR>
 let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
@@ -159,9 +166,10 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Clean"     : "✔︎",
     \ "Unknown"   : "?"
     \ }
-autocmd vimenter * NERDTree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:stdn_in") | NERDTree | endif
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if !isdirectory(argc()) | NERDTree | endif
+" && !exists("s:stdn_in") 
+
 " let g:nerdtree_tabs_open_on_console_startup = 1
 
 " End ---> NERDTree <--- configs
@@ -176,5 +184,27 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 let g:closetag_filenames = '*.html,*.xhtml,*.xml,*.vue,*.phtml,*.js,*.jsx,*.coffee,*.erb'
 " ---> End of Tags autofill<---
 
+" Set automatically open vertical terminal on right side
+vert botright term
+call term_start('stoponexit', {'term_finish': 'close', })
 
 
+
+" Code folding options {
+  nmap <leader>f0 :set foldlevel=0<CR>
+  nmap <leader>f1 :set foldlevel=1<CR>
+  nmap <leader>f2 :set foldlevel=2<CR>
+  nmap <leader>f3 :set foldlevel=3<CR>
+  nmap <leader>f4 :set foldlevel=4<CR>
+  nmap <leader>f5 :set foldlevel=5<CR>
+  nmap <leader>f6 :set foldlevel=6<CR>
+  nmap <leader>f7 :set foldlevel=7<CR>
+  nmap <leader>f8 :set foldlevel=8<CR>
+  nmap <leader>f9 :set foldlevel=9<CR>
+
+  " current open
+  map fo :foldopen <CR>
+  map fc :foldclose <CR>
+" }
+
+" Tab navigation
