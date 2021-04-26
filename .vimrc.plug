@@ -1,5 +1,8 @@
-" PlugInstall Start                                                                                                                                                                                                                       
+ " PlugInstall Start                                                                                                                                                                                                                       
 call plug#begin('~/.vim/plugged')
+" Bash support plugin
+Plug 'vim-scripts/bash-support.vim' 
+"End bash support plugin
 " Install Vim-Easy-Align
 Plug 'junegunn/vim-easy-align'
 Plug 'mhartington/oceanic-next'
@@ -41,6 +44,10 @@ Plug 'jiangmiao/auto-pairs'
 
 " Tmux
 Plug 'christoomey/vim-tmux-navigator'
-
+" Vim TODO plugin
+Plug 'editorconfig/editorconfig-vim'
+Plug 'vim-scripts/todo-txt.vim'
+Plug 'allisonlarson/todo-vim'
+"End Vim TODO plugins
 " PlugInstall end
 call plug#end()
